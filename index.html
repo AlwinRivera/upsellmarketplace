@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+        .site-branding {
+            display: none !important;
+        }
+
+        body,
+        html {
+            font-family: 'Open Sans', sans-serif;
+            color: #222222;
+        }
+
+        .elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated {
+            padding: 0px !important;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .blue {
+            color: #345aa9;
+        }
+
+        .green {
+            color: #3fb976;
+        }
+
+        .site-content {
+            padding: 0;
+        }
+
+        .header {
+            background: url(https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        p {
+            font-weight: 500;
+        }
+
+
+
+
+        /**/
+
+        td span.percent {
+            position: absolute;
+            right: 20px;
+            top: 12px;
+            color: grey;
+            font-size: 17px;
+        }
+
+        td span.dollar {
+            position: absolute;
+            top: 16px;
+            left: 23px;
+            color: grey;
+            font-size: 17px;
+        }
+
+        td input {
+            padding-left: 21px !important;
+        }
+
+        .datagrid table {
+            border-collapse: collapse;
+            text-align: left;
+            width: 80%;
+        }
+
+        .datagrid table.input-table {
+            width: 50%;
+        }
+
+        .datagrid table.lifetime {
+            width: 40%;
+        }
+
+        .datagrid {
+            font: normal 12px/150% Arial, Helvetica, sans-serif;
+            background: none;
+            overflow: hidden;
+            border: none;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        .datagrid table td,
+        .datagrid table th {
+            padding: 7px 13px;
+        }
+
+        .datagrid table thead th {
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #36752D), color-stop(1, #275420));
+            background: -moz-linear-gradient(center top, #36752D 5%, #275420 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#36752D', endColorstr='#275420');
+            background-color: #36752D;
+            color: #FFFFFF;
+            font-size: 13px;
+            font-weight: bold;
+            border-left: 1px solid #36752D;
+            text-align: ;
+        }
+
+        .datagrid table thead th:first-child {
+            border: none;
+        }
+
+        .datagrid table tbody td {
+            color: #275420;
+            border-left: 1px solid #C6FFC2;
+            font-size: 14.5px;
+            font-weight: normal;
+        }
+
+        .datagrid table tbody .alt td {
+            background: #DFFFDE;
+            color: #275420;
+        }
+
+        .datagrid table tbody td:first-child {
+            border-left: none;
+        }
+
+        .datagrid table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .datagrid table tfoot td div {
+            border-top: 1px solid #36752D;
+            background: #DFFFDE;
+        }
+
+        .datagrid table tfoot td {
+            padding: 0;
+            font-size: 12px
+        }
+
+        .datagrid table tfoot td div {
+            padding: 2px;
+        }
+
+        .datagrid table tfoot td ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: right;
+        }
+
+        .datagrid table tfoot li {
+            display: inline;
+        }
+
+        .datagrid table tfoot li a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 1px;
+            color: #FFFFFF;
+            border: 1px solid #36752D;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #36752D), color-stop(1, #275420));
+            background: -moz-linear-gradient(center top, #36752D 5%, #275420 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#36752D', endColorstr='#275420');
+            background-color: #36752D;
+        }
+
+        .datagrid table tfoot ul.active,
+        .datagrid table tfoot ul a:hover {
+            text-decoration: none;
+            border-color: #275420;
+            color: #FFFFFF;
+            background: none;
+            background-color: #36752D;
+        }
+
+        div.dhtmlx_window_active,
+        div.dhx_modal_cover_dv {
+            position: fixed !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header jumbotron jumbotron-fluid">
+        <div class="container py-5">
+            <h1 class="text-center invisible">
+                How to <span class="blue">Forecast</span> New Revenue From <span class="green">Upsell Marketplace</span>
+            </h1>
+        </div>
+    </div>
+
+
+    <section class="main">
+        <div class="container">
+            <div class="row clearfix justify-content-center">
+                <div class="col-md-7">
+                    <h1>
+                        How to Forecast New Revenue
+                        From Upsell Marketplace
+                    </h1>
+                    <p class="mt-4">
+                        Forecasting incoming revenue can be a hit-or-miss affair. Forecasts are made based on
+                        historical performance which can and will fluctuate. It is always much easier to forecast
+                        expenses than it is to try and predict the volume of revenue you will have over any given
+                        period, so that is where most entrepreneurs start. Once you have a solid idea about your
+                        monthly expenses, it becomes easier to have an idea about what it will take to become
+                        profitable.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-4 clearfix justify-content-center align-items-center">
+                <div class="col-md-6 pr-md-4">
+                    <img src="https://images.pexels.com/photos/2977565/pexels-photo-2977565.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        class="img-fluid py-3" />
+                </div>
+                <div class="col-md-6 pl-md-5">
+                    <p>
+                        Many businesspeople try to develop two sets of revenue forecasts, one being a conservative
+                        estimate and the other being more optimistic. This might seem like wasted energy,
+                        but it is a good practice to get into, because if you do not think big, you will probably
+                        never get big. At any rate, forecasting your revenue is a worthwhile exercise, because if
+                        you hope to attract any serious investors, they will want to have some idea about the volume
+                        of revenue your company is likely to be generating.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-4 clearfix justify-content-center align-items-center">
+                <div class="col-md-7">
+                    <p>
+                        Now there is a way that you can forecast incoming revenue with a pretty fair degree
+                        of accuracy, by working with our subscription upselling service at Upsell Marketplace
+                        (UM). Upsell Marketplace specializes in sales, servicing, and fulfillment of physical and
+                        digital subscriptions, and when your business is supported by a high volume of such
+                        subscription sales, you’ll be able to accurately predict monthly revenues with relative
+                        certainty, since you’ll know ahead of time what the volume of subscription sales will be
+                        each month.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row clearfix py-5 justify-content-center">
+                <div class="col-md-7 py-2">
+                    <h1>What is Upsell Marketplace?</h1>
+                    <p class="mt-4">
+                        Upsell Marketplace (UM) is a dynamic company which was founded for the sole purpose of managing
+                        one of the hottest trends in sales and marketing, i.e. subscription-based upsells. This exciting
+                        trend is gaining serious traction in the business world for the very reason described above - it
+                        allows you to forecast your revenue with some degree of certainty, so that you can develop
+                        operational plans and staffing plans which will help to grow your company and make it more
+                        successful.
+                    </p>
+                </div>
+
+                <div class="col-md-7 my-auto">
+                    <p>
+                        With more than 100 years of combined experience in the field of subscription sales, billing, and
+                        servicing, UM personnel have the ability to bring together all the mission-critical and Best
+                        Practices in a single, easy solution for clients who wish to monetize their sales funnels. Our
+                        specialists are adept at managing upsells, and they have a wealth of experience integrating with
+                        many diverse types of software, which is why we can easily integrate with whatever software your
+                        business uses.
+                    </p>
+                </div>
+                <div class="col-md-10 my-auto">
+                    <img src="https://images.pexels.com/photos/2977547/pexels-photo-2977547.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        class="img-fluid py-3" />
+                </div>
+
+                <div class="col-md-7 mt-4">
+                    <p>
+                        We can help you offer products, periodicals, and programs to your customers which will
+                        complement your existing business, and which will not require any major investment on your part.
+                        You can choose whether you want to earn immediate working capital from upselling, or if you
+                        prefer to work toward long-term income and working capital. We can establish or improve upon
+                        your current subscription upsell campaign, boosting average order value to a higher level, and
+                        increasing lifetime value for all your customers. Our company can also help lower your costs,
+                        because we have access to group-negotiated wholesale rates from a great number of providers.
+                    </p>
+                </div>
+
+
+                <div class="col-md-7 py-5">
+                    <h1>How Upsell Marketplace works</h1>
+                    <p class="mt-4">
+                        When you decide to collaborate with UM, there will be a simple startup process to get you up and
+                        running. Firstly, you will have to register and confirm your account, after which you’ll go
+                        through the guided setup process for whatever kind of upsell subscription you’ll be dealing
+                        with. We provide a number of installation tools which make the process go smoothly and
+                        efficiently, so that your upsell offer can be quickly deployed to your website, where it will be
+                        seen by the masses.
+                    </p>
+                </div>
+
+                <div class="col-md-10 my-auto">
+                    <img src="https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        class="img-fluid py-3" />
+                </div>
+
+                <div class="col-md-7 my-auto">
+                    <p class="mt-4">
+                        If you happen to have a more complicated integration process, our integration team will develop
+                        a custom procedure that will ensure a smooth installation, so you can hit the ground running.
+                        Our fees will always be billed at cost, and they will reflect the lowest group-negotiated
+                        discounts available on the marketplace. We feature several upsell options which include zero
+                        cost fulfillment, which means you pay nothing for order handling, weight handling, picking, and
+                        packing.
+                    </p>
+                </div>
+
+
+
+
+                <div class="col-md-7">
+                    <p>
+                        Once your upsell offer has been fully deployed, all you have to do is relax and enjoy the
+                        incoming profits. Revenues will be deposited directly into your bank account from your Merchant
+                        Processing Account, and if you choose to realize quicker profits, you’ll have the option of
+                        factoring some of your orders to the highest bidder. Whenever you need any advice or
+                        recommendations, we’ll be there to guide you through the process, so that you can maximize your
+                        revenue stream, and get the absolute most out of your upsell subscription campaigns.
+                    </p>
+                </div>
+
+
+                <div class="col-md-7 py-3">
+                    <br />
+                    <h1 class="text-left">
+                        Forecasting your revenue with <br />
+                        Upsell Marketplace
+                    </h1>
+                    <br />
+                    <p>
+                        Traditionally, it has been extremely difficult for startup companies to forecast sales with any
+                        degree of accuracy, and it is easy to see why. With no historical data to indicate any kind of
+                        sales volume, you do not really have much to go on, other than whatever market research you
+                        conducted beforehand. When you are dealing with upsell subscriptions however, that whole model
+                        becomes much more definite, and you’ll have some hard numbers you can work with to forecast your
+                        monthly revenue.
+                    </p>
+
+                    <p>
+                        Conventional forecasting wisdom calls for including only about 20% of your customer base,
+                        because that 20% is responsible for 80% of your business, but that simply is not the case with a
+                        subscription-based business. You will know exactly which customers to include in your forecast,
+                        because they will be the ones who are subscribing from you currently. You will also know which
+                        customers are coming on board this month because their subscriptions will be starting, and their
+                        revenues will be added to the volume you already have.
+                    </p>
+                </div>
+
+                <div class="col-md-7 py-3 my-auto">
+                    <p>
+                        You can probably even predict the number of new subscriptions you will be picking up this month,
+                        based on the trend you’ve seen over the past few months. You won’t have to make any adjustments
+                        to consider seasonal factors such as holiday sales, because your subscription-based business
+                        will forge ahead nicely, regardless of the time of year or the particular season which happens
+                        to be in effect. In short, forecasting your revenue will be a much simpler task because you have
+                        an upsell subscription business, and because you are working with UM, the experts in the field.
+                    </p>
+                </div>
+
+                <div class="col-md-10 py-3 my-auto">
+                    <img src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        class="img-fluid py-3 mx-auto" />
+                </div>
+
+                <div class="col-md-7 py-3">
+                    <p>
+                        If you have more than one product, program, or digital magazine which you’re offering to
+                        consumers, it becomes a simple matter to combine the individual subscriptions for these, to come
+                        up with an aggregate which accurately represents your incoming revenue. Thus, forecasting your
+                        sales revenue with UM becomes a predictable and repeatable process, which you can rely on for
+                        accuracy. That in turn, means that you will be able to arrange for adequate staffing and to make
+                        appropriate operational plans that will lead to business growth and more profits.
+                    </p>
+                </div>
+
+                <div class="col-md-7 py-3">
+                    <h1>Get Started</h1>
+                    <p>
+                        There are several different ways you can get the ball rolling on your own upsell subscription
+                        campaigns by collaborating with Upsell Plugin Marketplace. You can call us directly at (833)
+                        861-5264 to discuss your needs with us, and possibly schedule a consultation. You can contact us
+                        via email at support@upsellplugin.io, or you can schedule a time which is convenient for you, so
+                        you can have a discussion with one of our representatives. Whichever method you make use of, be
+                        sure and contact us as soon as possible, so you can start increasing your revenues and becoming
+                        more profitable right away.
+                    </p>
+
+                </div>
+
+                
+                <div class="col-md-7 py-3">
+                    <h1>Compounding revenue - month after month / year after year</h1>
+                </div>
+                <div class="col-md-10">
+                    <div class="datagrid">
+                        <table border="1" class="input-table mx-auto">
+                            <tr>
+                                <td># of Normal Customers each month (before upsell)</td>
+                                <td><input type="number" id="before_upsell" value="0" /></td>
+                            </tr>
+                            <tr>
+                                <td>Customer that Renew each month</td>
+                                <td style="position:relative;"><span class="percent">%</span><input type="number"
+                                        id="renew" value="0" /></td>
+                            </tr>
+                            <tr>
+                                <td>% of Customers that Buy Upsell</td>
+                                <td style="position:relative;"><span class="percent">%</span><input type="number"
+                                        id="percent_customer" value="0" /></td>
+                            </tr>
+                            <tr>
+                                <td>Average Additional Monthly Revenue From Upsell</td>
+                                <td style="position:relative;"><span class="dollar">$</span><input type="number"
+                                        id="average_monthly" value="0" /></td>
+                            </tr>
+                        </table>
+                        <br />
+
+                        <table border="1" class="mx-auto">
+                            <thead>
+                                <tr>
+                                    <th width="130">Months</th>
+                                    <th>Beginning # of Upsell Customers</th>
+                                    <th>Add: New Upsells sold during month</th>
+                                    <th>Less: Cancellations during month </th>
+                                    <th>Ending Upsell Customers </th>
+                                    <th>Projected Revenue</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td> Month 1 </td>
+                                <td id="col_0_0">-</td>
+                                <td id="col_0_1">-</td>
+                                <td id="col_0_2">-</td>
+                                <td id="col_0_3">-</td>
+                                <td id="col_0_4">-</td>
+                            </tr>
+                            <tr>
+                                <td> Month 2 </td>
+                                <td id="col_1_0">-</td>
+                                <td id="col_1_1">-</td>
+                                <td id="col_1_2">-</td>
+                                <td id="col_1_3">-</td>
+                                <td id="col_1_4">-</td>
+                            </tr>
+                            <tr>
+                                <td> Month 3 </td>
+                                <td id="col_2_0">-</td>
+                                <td id="col_2_1">-</td>
+                                <td id="col_2_2">-</td>
+                                <td id="col_2_3">-</td>
+                                <td id="col_2_4">-</td>
+                            </tr>
+                            <tr>
+                                <td> Month 4 </td>
+                                <td id="col_3_0">-</td>
+                                <td id="col_3_1">-</td>
+                                <td id="col_3_2">-</td>
+                                <td id="col_3_3">-</td>
+                                <td id="col_3_4">-</td>
+                            </tr>
+                            <tr>
+                                <td> Month 5 </td>
+                                <td id="col_4_0">-</td>
+                                <td id="col_4_1">-</td>
+                                <td id="col_4_2">-</td>
+                                <td id="col_4_3">-</td>
+                                <td id="col_4_4">-</td>
+                            </tr>
+                            <tr>
+                                <td> Month 6 </td>
+                                <td id="col_5_0">-</td>
+                                <td id="col_5_1">-</td>
+                                <td id="col_5_2">-</td>
+                                <td id="col_5_3">-</td>
+                                <td id="col_5_4">-</td>
+                            </tr>
+                            <tr>
+                                <td> Month 7 </td>
+                                <td id="col_6_0">-</td>
+                                <td id="col_6_1">-</td>
+                                <td id="col_6_2">-</td>
+                                <td id="col_6_3">-</td>
+                                <td id="col_6_4">-</td>
+                            </tr>
+                            <tr>
+                                <td> Month 8 </td>
+                                <td id="col_7_0">-</td>
+                                <td id="col_7_1">-</td>
+                                <td id="col_7_2">-</td>
+                                <td id="col_7_3">-</td>
+                                <td id="col_7_4">-</td>
+                            </tr>
+                            <tr>
+                                <td> Month 9 </td>
+                                <td id="col_8_0">-</td>
+                                <td id="col_8_1">-</td>
+                                <td id="col_8_2">-</td>
+                                <td id="col_8_3">-</td>
+                                <td id="col_8_4">-</td>
+                            </tr>
+                            <tr>
+                                <td> Month 10 </td>
+                                <td id="col_9_0">-</td>
+                                <td id="col_9_1">-</td>
+                                <td id="col_9_2">-</td>
+                                <td id="col_9_3">-</td>
+                                <td id="col_9_4">-</td>
+                            </tr>
+                            <tr>
+                                <td> Month 11 </td>
+                                <td id="col_10_0">-</td>
+                                <td id="col_10_1">-</td>
+                                <td id="col_10_2">-</td>
+                                <td id="col_10_3">-</td>
+                                <td id="col_10_4">-</td>
+                            <tr>
+                                <td> Month 12 </td>
+                                <td id="col_11_0">-</td>
+                                <td id="col_11_1">-</td>
+                                <td id="col_11_2">-</td>
+                                <td id="col_11_3">-</td>
+                                <td id="col_11_4">-</td>
+
+                            </tr>
+
+                        </table>
+
+                        <table class="lifetime mx-auto">
+                            <tr>
+                                <td>Projected Customer Lifespan</td>
+                                <td id="life-span"></td>
+                            </tr>
+                            <tr>
+                                <td>Projected Customer Lifetime Value</td>
+                                <td id="lifetime-value"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        window.onload = function () {
+
+            var $ = jQuery.noConflict();
+
+            function is_zero(obj) {
+                var len = obj.val().length;
+                if (len == 0) {
+                    obj.val(0);
+                }
+            }
+
+            function dashToZero(amount) {
+                if (amount == "-") {
+                    return 0;
+                }
+                return amount.replace(/,/g, '');
+            }
+
+            function negatedAmount(amount) {
+                if (amount.toString().indexOf("(") != -1) {
+                    return -parseFloat(amount.replace(/\(|,|\)/g, ""));
+                } else {
+                    return amount;
+                }
+            }
+
+            function negative_amount(amount) {
+                var removecomma = parseFloat(amount.replace(/,/g, ""));
+                if (removecomma < 0) {
+                    return "(" + removecomma.toString().replace("-", "") + ")";
+                } else if (removecomma == 0 || removecomma == '-0') {
+                    return "-";
+                } else {
+                    return removecomma;
+                }
+            }
+
+            //function for adding commas for the amount
+            function numberWithCommas(x) {
+                var parts = x.toString().split(".");
+                parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                return parts.join(".");
+            }
+
+            var row = 0;
+
+            function upsell_customer(col) {
+                var ending_upsell = parseFloat(dashToZero($("#col_" + col + "_3").text()));
+                row = col + 1;
+                $("#col_" + row + "_0").html(numberWithCommas(ending_upsell.toFixed(2)));
+
+            }
+
+            function new_sold_upsell_total() {
+                var before_upsell_a = parseFloat($("#before_upsell").val());
+                var percent_customer_a = parseFloat($("#percent_customer").val());
+                var total = before_upsell_a * (percent_customer_a / 100);
+                for (var row = 0; row <= 11; row++) {
+                    $("#col_" + row + "_" + "1").html(numberWithCommas(total.toFixed(1)));
+                }
+            }
+
+
+            function less_cancellation_total(col) {
+                var monthly = -parseFloat(dashToZero($("#col_" + col + "_0").text()));
+                var renew = parseFloat($("#renew").val() / 100);
+                var total = Math.round(monthly * (1 - renew));
+                $("#col_" + col + "_2").html(numberWithCommas(negative_amount(total.toFixed(0))));
+
+            }
+
+            function ending_upsell_total(col) {
+                var row_total = 0;
+                for (var row = 0; row <= 2; row++) {
+                    row_total += parseFloat(negatedAmount(dashToZero($("#col_" + col + "_" + row).text())));
+                }
+                $("#col_" + col + "_" + row).html(numberWithCommas(row_total.toFixed(2)));
+
+            }
+
+            function project_revenue(col) {
+
+                var ending_upsell = parseFloat(dashToZero($("#col_" + col + "_3").text()));
+                var average_monthly = parseFloat($("#average_monthly").val());
+                var total = Math.round(average_monthly * ending_upsell);
+
+                $("#col_" + col + "_4").html("$" + numberWithCommas(total.toFixed(0)));
+
+            }
+
+            function projection() {
+                new_sold_upsell_total();
+                for (var col = 0; col <= 11; col++) {
+                    less_cancellation_total(col);
+                    ending_upsell_total(col);
+                    upsell_customer(col);
+                    project_revenue(col);
+
+                }
+                lifespan();
+                lifetime();
+            }
+
+
+            function lifespan() {
+                var total = 1 / (1 - (parseFloat($("#renew").val()) / 100));
+                $("#life-span").html("$ " + numberWithCommas(total.toFixed(2)));
+            }
+
+
+            function lifetime() {
+                var lifespan = parseFloat($("#life-span").html().replace('$', ""));
+                var total = lifespan * parseFloat($("#average_monthly").val());
+                $("#lifetime-value").html("$ " + numberWithCommas(total.toFixed(2)));
+            }
+
+            function reset() {
+                $("#before_upsell,#percent_customer, #renew, #average_monthly").val(0);
+            }
+
+            $("#before_upsell, #percent_customer, #renew, #average_monthly").on("keyup change blur", function () {
+                is_zero($(this));
+                projection();
+            });
+
+            reset();
+            projection();
+        }
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
