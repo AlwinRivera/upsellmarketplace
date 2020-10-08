@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Forecast Tool</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -417,11 +416,331 @@
 
                 </div>
 
-                
+                <div class="col-md-7 py-3">
+                    <h1>Assuming the following:</h1>
+                </div>
+                <div class="col-md-7">
+                    <table class="table table-bordered shadow-sm">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    # of Normal Customers each month (before upsell)
+                                </td>
+                                <td>
+                                    1000
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Customer that Renew each month</td>
+                                <td>
+                                    70%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>% of Customers that Buy Upsell</td>
+                                <td>
+                                    80%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Average Additional Monthly Revenue From Upsell</td>
+                                <td>
+                                    $9.99
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="col-md-7 py-3">
                     <h1>Compounding revenue - month after month / year after year</h1>
                 </div>
                 <div class="col-md-10">
+                    <table class="table table-bordered table-hover mt-4">
+                        <thead>
+                            <tr>
+                                <th width="130">Months</th>
+                                <th>Beginning # of Upsell Customers</th>
+                                <th>Add: New Upsells sold during month</th>
+                                <th>Less: Cancellations during month </th>
+                                <th>Ending Upsell Customers </th>
+                                <th>Projected Revenue</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td> Month 1 </td>
+                            <td>-</td>
+                            <td>800</td>
+                            <td>-</td>
+                            <td>800</td>
+                            <td>$7,992</td>
+                        </tr>
+                        <tr>
+                            <td> Month 2 </td>
+                            <td>800</td>
+                            <td>800</td>
+                            <td>(240)</td>
+                            <td>1,360</td>
+                            <td>$13,586</td>
+                        </tr>
+                        <tr>
+                            <td> Month 3 </td>
+                            <td>1,360</td>
+                            <td>800</td>
+                            <td>(408)</td>
+                            <td>1,752</td>
+                            <td>$17,502</td>
+                        </tr>
+                        <tr>
+                            <td> Month 4 </td>
+                            <td>1,752</td>
+                            <td>800</td>
+                            <td>(526)</td>
+                            <td>2,026</td>
+                            <td>$20,244</td>
+                        </tr>
+                        <tr>
+                            <td> Month 5 </td>
+                            <td>2,026</td>
+                            <td>800</td>
+                            <td>(608)</td>
+                            <td>2,218</td>
+                            <td>$22,163</td>
+                        </tr>
+                        <tr>
+                            <td> Month 6 </td>
+                            <td>2,218</td>
+                            <td>800</td>
+                            <td>(666)</td>
+                            <td>2,353</td>
+                            <td>$23,506</td>
+                        </tr>
+                        <tr>
+                            <td> Month 7 </td>
+                            <td>2,353</td>
+                            <td>800</td>
+                            <td>(706)</td>
+                            <td>2,447</td>
+                            <td>$24,446</td>
+                        </tr>
+                        <tr>
+                            <td> Month 8 </td>
+                            <td>2,447</td>
+                            <td>800</td>
+                            <td>(734)</td>
+                            <td>2,513</td>
+                            <td>$25,104</td>
+                        </tr>
+                        <tr>
+                            <td> Month 9 </td>
+                            <td>2,513</td>
+                            <td>800</td>
+                            <td>(754)</td>
+                            <td>2,559</td>
+                            <td>$25,565</td>
+                        </tr>
+                        <tr>
+                            <td> Month 10 </td>
+                            <td>2,559</td>
+                            <td>800</td>
+                            <td>(768)</td>
+                            <td>2,591</td>
+                            <td>$25,887</td>
+                        </tr>
+                        <tr>
+                            <td> Month 11 </td>
+                            <td>2,591</td>
+                            <td>800</td>
+                            <td>(777)</td>
+                            <td>2,614</td>
+                            <td>$26,113</td>
+                        <tr>
+                            <td> Month 12 </td>
+                            <td>2,614</td>
+                            <td>800</td>
+                            <td>(784)</td>
+                            <td>2,630</td>
+                            <td>$26,271</td>
+
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="col-md-7 py-3 mt-4">
+                    <h1>Let's Start</h1>
+                </div>
+                <div class="col-md-7">
+                    <table class="input-table mx-auto table table-bordered shadow-sm">
+                        <tr>
+                            <td class="align-middle"># of Normal Customers each month (before upsell)</td>
+                            <td><input type="number" id="before_upsell" value="0" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">Customer that Renew each month</td>
+                            <!-- <td style="position:relative;"><span class="percent">%</span><input type="number" id="renew"
+                                    value="0" /></td> -->
+                            <td style="position:relative;">
+                                <div class="input-group">
+                                    <input type="number" id="renew" value="0" class="form-control" />
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">% of Customers that Buy Upsell</td>
+                            <!-- <td style="position:relative;"><span class="percent">%</span><input type="number"
+                                    id="percent_customer" value="0" /></td> -->
+                            <td style="position:relative;">
+                                <div class="input-group">
+                                    <input type="number" id="percent_customer" value="0" class="form-control" />
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">Average Additional Monthly Revenue From Upsell</td>
+                            <!-- <td style="position:relative;"><span class="dollar">$</span><input type="number"
+                                    id="average_monthly" value="0" /></td> -->
+                            <td style="position:relative;">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+                                    </div>
+                                    <input type="number" id="average_monthly" value="0" class="form-control" />
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-md-10">
+                    <table class="mx-auto table table-bordered shadow-sm mt-5 table-hover">
+                        <thead>
+                            <tr>
+                                <th width="130">Months</th>
+                                <th>Beginning # of Upsell Customers</th>
+                                <th>Add: New Upsells sold during month</th>
+                                <th>Less: Cancellations during month </th>
+                                <th>Ending Upsell Customers </th>
+                                <th>Projected Revenue</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td> Month 1 </td>
+                            <td id="col_0_0">-</td>
+                            <td id="col_0_1">-</td>
+                            <td id="col_0_2">-</td>
+                            <td id="col_0_3">-</td>
+                            <td id="col_0_4">-</td>
+                        </tr>
+                        <tr>
+                            <td> Month 2 </td>
+                            <td id="col_1_0">-</td>
+                            <td id="col_1_1">-</td>
+                            <td id="col_1_2">-</td>
+                            <td id="col_1_3">-</td>
+                            <td id="col_1_4">-</td>
+                        </tr>
+                        <tr>
+                            <td> Month 3 </td>
+                            <td id="col_2_0">-</td>
+                            <td id="col_2_1">-</td>
+                            <td id="col_2_2">-</td>
+                            <td id="col_2_3">-</td>
+                            <td id="col_2_4">-</td>
+                        </tr>
+                        <tr>
+                            <td> Month 4 </td>
+                            <td id="col_3_0">-</td>
+                            <td id="col_3_1">-</td>
+                            <td id="col_3_2">-</td>
+                            <td id="col_3_3">-</td>
+                            <td id="col_3_4">-</td>
+                        </tr>
+                        <tr>
+                            <td> Month 5 </td>
+                            <td id="col_4_0">-</td>
+                            <td id="col_4_1">-</td>
+                            <td id="col_4_2">-</td>
+                            <td id="col_4_3">-</td>
+                            <td id="col_4_4">-</td>
+                        </tr>
+                        <tr>
+                            <td> Month 6 </td>
+                            <td id="col_5_0">-</td>
+                            <td id="col_5_1">-</td>
+                            <td id="col_5_2">-</td>
+                            <td id="col_5_3">-</td>
+                            <td id="col_5_4">-</td>
+                        </tr>
+                        <tr>
+                            <td> Month 7 </td>
+                            <td id="col_6_0">-</td>
+                            <td id="col_6_1">-</td>
+                            <td id="col_6_2">-</td>
+                            <td id="col_6_3">-</td>
+                            <td id="col_6_4">-</td>
+                        </tr>
+                        <tr>
+                            <td> Month 8 </td>
+                            <td id="col_7_0">-</td>
+                            <td id="col_7_1">-</td>
+                            <td id="col_7_2">-</td>
+                            <td id="col_7_3">-</td>
+                            <td id="col_7_4">-</td>
+                        </tr>
+                        <tr>
+                            <td> Month 9 </td>
+                            <td id="col_8_0">-</td>
+                            <td id="col_8_1">-</td>
+                            <td id="col_8_2">-</td>
+                            <td id="col_8_3">-</td>
+                            <td id="col_8_4">-</td>
+                        </tr>
+                        <tr>
+                            <td> Month 10 </td>
+                            <td id="col_9_0">-</td>
+                            <td id="col_9_1">-</td>
+                            <td id="col_9_2">-</td>
+                            <td id="col_9_3">-</td>
+                            <td id="col_9_4">-</td>
+                        </tr>
+                        <tr>
+                            <td> Month 11 </td>
+                            <td id="col_10_0">-</td>
+                            <td id="col_10_1">-</td>
+                            <td id="col_10_2">-</td>
+                            <td id="col_10_3">-</td>
+                            <td id="col_10_4">-</td>
+                        <tr>
+                            <td> Month 12 </td>
+                            <td id="col_11_0">-</td>
+                            <td id="col_11_1">-</td>
+                            <td id="col_11_2">-</td>
+                            <td id="col_11_3">-</td>
+                            <td id="col_11_4">-</td>
+
+                        </tr>
+
+                    </table>
+
+                    <table class="lifetime mx-auto table table-bordered shadow-sm mt-4">
+                        <tr>
+                            <td>Projected Customer Lifespan</td>
+                            <td id="life-span"></td>
+                        </tr>
+                        <tr>
+                            <td>Projected Customer Lifetime Value</td>
+                            <td id="lifetime-value"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- <div class="col-md-10">
                     <div class="datagrid">
                         <table border="1" class="input-table mx-auto">
                             <tr>
@@ -567,7 +886,7 @@
                             </tr>
                         </table>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
