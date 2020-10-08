@@ -2,15 +2,10 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Open+Sans&display=swap"
         rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -577,8 +572,6 @@
                         </tr>
                         <tr>
                             <td class="align-middle">Customer that Renew each month</td>
-                            <!-- <td style="position:relative;"><span class="percent">%</span><input type="number" id="renew"
-                                    value="0" /></td> -->
                             <td style="position:relative;">
                                 <div class="input-group">
                                     <input type="number" id="renew" value="0" class="form-control" />
@@ -590,8 +583,6 @@
                         </tr>
                         <tr>
                             <td class="align-middle">% of Customers that Buy Upsell</td>
-                            <!-- <td style="position:relative;"><span class="percent">%</span><input type="number"
-                                    id="percent_customer" value="0" /></td> -->
                             <td style="position:relative;">
                                 <div class="input-group">
                                     <input type="number" id="percent_customer" value="0" class="form-control" />
@@ -603,8 +594,6 @@
                         </tr>
                         <tr>
                             <td class="align-middle">Average Additional Monthly Revenue From Upsell</td>
-                            <!-- <td style="position:relative;"><span class="dollar">$</span><input type="number"
-                                    id="average_monthly" value="0" /></td> -->
                             <td style="position:relative;">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -739,154 +728,6 @@
                         </tr>
                     </table>
                 </div>
-
-                <!-- <div class="col-md-10">
-                    <div class="datagrid">
-                        <table border="1" class="input-table mx-auto">
-                            <tr>
-                                <td># of Normal Customers each month (before upsell)</td>
-                                <td><input type="number" id="before_upsell" value="0" /></td>
-                            </tr>
-                            <tr>
-                                <td>Customer that Renew each month</td>
-                                <td style="position:relative;"><span class="percent">%</span><input type="number"
-                                        id="renew" value="0" /></td>
-                            </tr>
-                            <tr>
-                                <td>% of Customers that Buy Upsell</td>
-                                <td style="position:relative;"><span class="percent">%</span><input type="number"
-                                        id="percent_customer" value="0" /></td>
-                            </tr>
-                            <tr>
-                                <td>Average Additional Monthly Revenue From Upsell</td>
-                                <td style="position:relative;"><span class="dollar">$</span><input type="number"
-                                        id="average_monthly" value="0" /></td>
-                            </tr>
-                        </table>
-                        <br />
-
-                        <table border="1" class="mx-auto">
-                            <thead>
-                                <tr>
-                                    <th width="130">Months</th>
-                                    <th>Beginning # of Upsell Customers</th>
-                                    <th>Add: New Upsells sold during month</th>
-                                    <th>Less: Cancellations during month </th>
-                                    <th>Ending Upsell Customers </th>
-                                    <th>Projected Revenue</th>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <td> Month 1 </td>
-                                <td id="col_0_0">-</td>
-                                <td id="col_0_1">-</td>
-                                <td id="col_0_2">-</td>
-                                <td id="col_0_3">-</td>
-                                <td id="col_0_4">-</td>
-                            </tr>
-                            <tr>
-                                <td> Month 2 </td>
-                                <td id="col_1_0">-</td>
-                                <td id="col_1_1">-</td>
-                                <td id="col_1_2">-</td>
-                                <td id="col_1_3">-</td>
-                                <td id="col_1_4">-</td>
-                            </tr>
-                            <tr>
-                                <td> Month 3 </td>
-                                <td id="col_2_0">-</td>
-                                <td id="col_2_1">-</td>
-                                <td id="col_2_2">-</td>
-                                <td id="col_2_3">-</td>
-                                <td id="col_2_4">-</td>
-                            </tr>
-                            <tr>
-                                <td> Month 4 </td>
-                                <td id="col_3_0">-</td>
-                                <td id="col_3_1">-</td>
-                                <td id="col_3_2">-</td>
-                                <td id="col_3_3">-</td>
-                                <td id="col_3_4">-</td>
-                            </tr>
-                            <tr>
-                                <td> Month 5 </td>
-                                <td id="col_4_0">-</td>
-                                <td id="col_4_1">-</td>
-                                <td id="col_4_2">-</td>
-                                <td id="col_4_3">-</td>
-                                <td id="col_4_4">-</td>
-                            </tr>
-                            <tr>
-                                <td> Month 6 </td>
-                                <td id="col_5_0">-</td>
-                                <td id="col_5_1">-</td>
-                                <td id="col_5_2">-</td>
-                                <td id="col_5_3">-</td>
-                                <td id="col_5_4">-</td>
-                            </tr>
-                            <tr>
-                                <td> Month 7 </td>
-                                <td id="col_6_0">-</td>
-                                <td id="col_6_1">-</td>
-                                <td id="col_6_2">-</td>
-                                <td id="col_6_3">-</td>
-                                <td id="col_6_4">-</td>
-                            </tr>
-                            <tr>
-                                <td> Month 8 </td>
-                                <td id="col_7_0">-</td>
-                                <td id="col_7_1">-</td>
-                                <td id="col_7_2">-</td>
-                                <td id="col_7_3">-</td>
-                                <td id="col_7_4">-</td>
-                            </tr>
-                            <tr>
-                                <td> Month 9 </td>
-                                <td id="col_8_0">-</td>
-                                <td id="col_8_1">-</td>
-                                <td id="col_8_2">-</td>
-                                <td id="col_8_3">-</td>
-                                <td id="col_8_4">-</td>
-                            </tr>
-                            <tr>
-                                <td> Month 10 </td>
-                                <td id="col_9_0">-</td>
-                                <td id="col_9_1">-</td>
-                                <td id="col_9_2">-</td>
-                                <td id="col_9_3">-</td>
-                                <td id="col_9_4">-</td>
-                            </tr>
-                            <tr>
-                                <td> Month 11 </td>
-                                <td id="col_10_0">-</td>
-                                <td id="col_10_1">-</td>
-                                <td id="col_10_2">-</td>
-                                <td id="col_10_3">-</td>
-                                <td id="col_10_4">-</td>
-                            <tr>
-                                <td> Month 12 </td>
-                                <td id="col_11_0">-</td>
-                                <td id="col_11_1">-</td>
-                                <td id="col_11_2">-</td>
-                                <td id="col_11_3">-</td>
-                                <td id="col_11_4">-</td>
-
-                            </tr>
-
-                        </table>
-
-                        <table class="lifetime mx-auto">
-                            <tr>
-                                <td>Projected Customer Lifespan</td>
-                                <td id="life-span"></td>
-                            </tr>
-                            <tr>
-                                <td>Projected Customer Lifetime Value</td>
-                                <td id="lifetime-value"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -999,7 +840,7 @@
 
             function lifespan() {
                 var total = 1 / (1 - (parseFloat($("#renew").val()) / 100));
-                $("#life-span").html("$ " + numberWithCommas(total.toFixed(2)));
+                $("#life-span").html(numberWithCommas(total.toFixed(2)));
             }
 
 
@@ -1023,9 +864,6 @@
         }
     </script>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
